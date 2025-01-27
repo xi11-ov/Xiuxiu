@@ -1,0 +1,213 @@
+proxy-groups:
+  - name: Xiuxiu
+    include-all: true
+    type: select
+
+  - name: BiliBili
+    include-all: true
+    type: select
+    proxies:
+      - DIRECT
+      - Xiuxiu
+
+  - name: Netflix
+    include-all: true
+    type: select
+    proxies:
+      - Xiuxiu
+
+  - name: Disney+
+    include-all: true
+    type: select
+    proxies:
+      - Xiuxiu
+
+  - name: HBO
+    include-all: true
+    type: select
+    proxies:
+      - Xiuxiu
+
+  - name: TikTok
+    include-all: true
+    type: select
+    proxies:
+      - Xiuxiu
+
+  - name: Spotify
+    include-all: true
+    type: select
+    proxies:
+      - Xiuxiu
+      - DIRECT
+
+  - name: OpenAI
+    include-all: true
+    type: select
+    proxies:
+      - Xiuxiu
+
+  - name: Microsoft
+    include-all: true
+    type: select
+    proxies:
+      - DIRECT
+      - Xiuxiu
+
+  - name: Steam
+    include-all: true
+    type: select
+    proxies:
+      - DIRECT
+      - Xiuxiu
+
+  - name: Emby
+    include-all: true
+    type: select
+    proxies:
+      - Xiuxiu
+      - DIRECT
+
+  - name: Discord
+    include-all: true
+    type: select
+    proxies:
+      - Xiuxiu
+
+  - name: Telegram
+    include-all: true
+    type: select
+    proxies:
+      - Xiuxiu
+
+rule-providers:
+  AD:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt"
+    interval: 86400
+    path: ./ruleset/reject.yaml
+
+  BiliBili:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili_No_Resolve.yaml"
+    interval: 86400
+    path: ./ruleset/BiliBili_No_Resolve.yaml
+
+  Netflix:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix_No_Resolve.yaml"
+    interval: 86400
+    path: ./ruleset/Netflix_No_Resolve.yaml
+
+  Disney+:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney_No_Resolve.yaml"
+    interval: 86400
+    path: ./ruleset/Disney_No_Resolve.yaml
+
+  HBO:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HBO/HBO_No_Resolve.yaml"
+    interval: 86400
+    path: ./ruleset/HBO_No_Resolve.yaml
+    
+  Spotify:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Spotify/Spotify_No_Resolve.yaml"
+    interval: 86400
+    path: ./ruleset/Spotify_No_Resolve.yaml
+
+  TikTok:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok_No_Resolve.yaml"
+    interval: 86400
+    path: ./ruleset/TikTok_No_Resolve.yaml
+
+  OpenAI:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI_No_Resolve.yaml"
+    interval: 86400
+    path: ./ruleset/OpenAI_No_Resolve.yaml
+
+  Microsoft:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft_No_Resolve.yaml"
+    interval: 86400
+    path: ./ruleset/Microsoft_No_Resolve.yaml
+
+  Steam:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam_No_Resolve.yaml"
+    interval: 86400
+    path: ./ruleset/Steam_No_Resolve.yaml
+
+  Emby:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/xi11-ov/Xiuxiu/refs/heads/x/Clash/Rules/Emby.yaml"
+    interval: 86400
+    path: ./ruleset/Emby_No_Resolve.yaml
+
+  Discord:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Discord/Discord_No_Resolve.yaml"
+    interval: 86400
+    path: ./ruleset/Discord_No_Resolve.yaml
+
+  Telegram:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram_No_Resolve.yaml"
+    interval: 86400
+    path: ./ruleset/Telegram_No_Resolve.yaml
+
+  Lan:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan_No_Resolve.yaml"
+    interval: 86400
+    path: ./ruleset/Lan_No_Resolve.yaml
+
+  ChinaMax:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMax/ChinaMax_Classical_No_Resolve.yaml"
+    interval: 86400
+    path: ./ruleset/ChinaMax_Classical_No_Resolve.yaml
+
+  Global:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global_Classical_No_Resolve.yaml"
+    interval: 86400
+    path: ./ruleset/Global_Classical_No_Resolve.yaml
+
+rules:
+  - RULE-SET,AD,REJECT
+  - RULE-SET,BiliBili,BiliBili
+  - RULE-SET,Netflix,Netflix
+  - RULE-SET,Disney+,Disney+
+  - RULE-SET,HBO,HBO
+  - RULE-SET,TikTok,TikTok
+  - RULE-SET,Spotify,Spotify
+  - RULE-SET,OpenAI,OpenAI
+  - RULE-SET,Microsoft,Microsoft
+  - RULE-SET,Steam,Steam
+  - RULE-SET,Emby,Emby
+  - RULE-SET,Discord,Discord
+  - RULE-SET,Telegram,Telegram
+  - RULE-SET,Lan,DIRECT
+  - RULE-SET,ChinaMax,DIRECT
+  - RULE-SET,Global,Xiuxiu
+  - MATCH,Xiuxiu
