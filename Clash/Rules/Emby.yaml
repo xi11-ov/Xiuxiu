@@ -1,11 +1,13 @@
 payload:
  - DOMAIN-SUFFIX,023168.xyz
+ - DOMAIN-SUFFIX,1024.name
  - DOMAIN-SUFFIX,123456.al
  - DOMAIN-SUFFIX,581658.best
  - DOMAIN-SUFFIX,7777777.buzz
  - DOMAIN-SUFFIX,9521732.xyz
  - DOMAIN-SUFFIX,abcj.uk
  - DOMAIN-SUFFIX,aca.best
+ - DOMAIN-SUFFIX,aganemby.top
  - DOMAIN-SUFFIX,bgp.yt
  - DOMAIN-SUFFIX,chirsemby.top
  - DOMAIN-SUFFIX,cn2gias.uk
@@ -25,6 +27,7 @@ payload:
  - DOMAIN-SUFFIX,saturday.video
  - DOMAIN-SUFFIX,siepro.uk
  - DOMAIN-SUFFIX,term.wtf
+ - DOMAIN-SUFFIX,xmax.vip
  - DOMAIN-SUFFIX,xmsl.org
  - DOMAIN-SUFFIX,yomo.lol
  - IP-CIDR,5.45.109.91/32,no-resolve
